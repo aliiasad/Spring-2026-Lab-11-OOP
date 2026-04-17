@@ -88,13 +88,20 @@ void GymLeader :: showInfo() {
 class Professor {
     protected:
         string field;
+        string profName;
     public:
         // setter
         void setField(string);
+        void setProfName(string);
 
         // helper
         void showProfessorInfo();
 };
+
+void Professor :: setProfName(string profName) {
+    this->profName = profName;
+    return;
+}
 
 void Professor :: setField(string field) { 
     this->field = field;

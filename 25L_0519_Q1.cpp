@@ -107,7 +107,25 @@ void Professor :: showProfessorInfo() {
 }
 
 // multiple inheritance ---> (base trainer) & (indp profesor) = ProfessiorTrainer
-class ProfessorTrainer : public Trainer , public Professor {
+class ProfessorTrainer : public Trainer, public Professor {
     private:
+        string researchArea;
     public:
+        // setter
+        void setResearch(string) { researchArea = r; }
+
+        // helper
+        void showInfo();
 };
+
+void ProfessorTrainer :: setResearch(string researchArea)  {
+    this->researchArea = researchArea;
+    return;
+}
+
+void ProfessorTrainer :: showInfo() {
+    Trainer :: showInfo();
+    showProfessorInfo();
+    cout << "Research Area: " << researchArea << endl;
+    return;
+}

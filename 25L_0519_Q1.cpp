@@ -1,3 +1,6 @@
+//Asad Ali
+//25L-0519
+
 # include <iostream>
 # include <cstring>
 using namespace std;
@@ -551,9 +554,12 @@ int main() {
     cout << "---BADGES---" << endl;
     Badge b1, b2, b3;
 
-    b1.setBadge(101, "Thunder Badge"); b1.showBadge();
-    b2.setBadge(102, "Cascade Badge"); b2.showBadge();
-    b3.setBadge(103, "Boulder Badge"); b3.showBadge();
+    b1.setBadge(101, "Thunder Badge"); 
+    b1.showBadge();
+    b2.setBadge(102, "Cascade Badge"); 
+    b2.showBadge();
+    b3.setBadge(103, "Boulder Badge"); 
+    b3.showBadge();
 
     return 0;
 }

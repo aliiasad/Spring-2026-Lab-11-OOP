@@ -61,3 +61,25 @@ void GymTrainer :: showInfo() {
     cout << "Type: " << specialtyType << endl;
     return;
 }
+
+class GymLeader : public GymTrainer {
+    protected:
+        string badgeReward;
+    public:
+        // setter
+        void setBadge(string);
+
+        // helper
+        void showInfo();
+};
+
+void GymLeader :: setBadge(string badgeReward)  {
+    this->badgeReward = badgeReward;
+    return;
+}
+
+void GymLeader :: showInfo() {
+    GymTrainer :: showInfo(); // calls GymTrainer which calls Trainer
+    cout << "Badge Reward: " << badgeReward << endl;
+    return;
+}

@@ -112,7 +112,7 @@ class ProfessorTrainer : public Trainer, public Professor {
         string researchArea;
     public:
         // setter
-        void setResearch(string) { researchArea = r; }
+        void setResearch(string);
 
         // helper
         void showInfo();
@@ -130,6 +130,7 @@ void ProfessorTrainer :: showInfo() {
     return;
 }
 
+// base class for hierarchy
 class Pokemon {
     protected:
         string name;
@@ -150,5 +151,28 @@ void Pokemon :: setPokemon(string name, int level) {
 
 void Pokemon :: showInfo() {
     cout << "Pokemon: " << name << " | Level: " << level << endl;
+    return;
+}
+
+// derived #1: fire
+class FirePokemon : public Pokemon {
+    private:
+        int flamePower;
+    public:
+        // setter
+        void setFlamePower(int);
+
+        // helper
+        void showInfo();
+};
+
+void FirePokemon :: setFlamePower(int flamePower) {
+    this->flamePower = flamePower;
+    return;
+}
+
+void FirePokemon :: showInfo() {
+    Pokemon :: showInfo();
+    cout << "Type: Fire | Flame Power: " << flamePower << endl;
     return;
 }

@@ -199,3 +199,25 @@ void WaterPokemon :: showInfo() {
     cout << "Type: Water | Water Pressure: " << waterPressure << endl;
     return;
 }
+
+class ElectricPokemon : public Pokemon {
+    private:
+        int voltage;
+    public:
+        void setVoltage(int);
+            void showInfo() {
+            Pokemon::showInfo();
+            cout << "Type: Electric | Voltage: " << voltage << endl;
+        }
+};
+
+void ElectricPokemon :: setVoltage(int voltage) { 
+    this->voltage = voltage;
+    return;
+}
+
+void ElectricPokemon :: showInfo() {
+    Pokemon :: showInfo();
+    cout << "Type: Electric | Voltage: " << voltage << endl;
+    return;
+}

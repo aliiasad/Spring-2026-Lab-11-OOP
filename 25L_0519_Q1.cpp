@@ -176,3 +176,26 @@ void FirePokemon :: showInfo() {
     cout << "Type: Fire | Flame Power: " << flamePower << endl;
     return;
 }
+
+// derived #2: water
+class WaterPokemon : public Pokemon {
+    private:
+        int waterPressure;
+    public:
+        // setter
+        void setWaterPressure(int);
+
+        // helper
+        void showInfo();
+};
+
+void WaterPokemon :: setWaterPressure(int waterPressure) { 
+    this->waterPressure = waterPressure; 
+    return;
+}
+
+void WaterPokemon :: showInfo() {
+    Pokemon :: showInfo();
+    cout << "Type: Water | Water Pressure: " << waterPressure << endl;
+    return;
+}

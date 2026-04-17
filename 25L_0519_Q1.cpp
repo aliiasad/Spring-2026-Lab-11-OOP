@@ -145,9 +145,7 @@ class Pokemon {
     public:
         void setPokemon(string, int);
 
-        void showInfo() {
-            cout << "Pokemon: " << name << " | Level: " << level << endl;
-    }
+        void showInfo();
 };
 
 void Pokemon :: setPokemon(string name, int level) {
@@ -212,11 +210,11 @@ class ElectricPokemon : public Pokemon {
     private:
         int voltage;
     public:
+        // setter
         void setVoltage(int);
-            void showInfo() {
-            Pokemon::showInfo();
-            cout << "Type: Electric | Voltage: " << voltage << endl;
-        }
+         
+        // helper
+        void showInfo();
 };
 
 void ElectricPokemon :: setVoltage(int voltage) { 
@@ -260,10 +258,7 @@ class FlyingPokemon : public Pokemon {
         void setFlightSpeed(int);
 
         // helper
-        void showInfo() {
-            Pokemon::showInfo();
-            cout << "Type: Flying | Flight Speed: " << flightSpeed << endl;
-        }
+        void showInfo();
 };
 
 void FlyingPokemon :: setFlightSpeed(int flightSpeed)   {
@@ -275,4 +270,51 @@ void FlyingPokemon :: showInfo() {
     Pokemon::showInfo();
     cout << "Type: Flying | Flight Speed: " << flightSpeed << endl;
     return;
+}
+
+int main() {
+    // cout << "        OBSERVATION TASK" << endl;
+
+    // // base class Pokemon
+    // cout << "\n--- Base Class Pokemon ---" << endl;
+    // Pokemon eevee;
+    // eevee.setPokemon("Eevee", 5);
+    // eevee.showInfo();  // only prints name and level
+
+    // // Derived Pokemons 
+    // cout << "\n--- Derived Pokemon Types ---" << endl;
+
+    // FirePokemon charizard;
+    // charizard.setPokemon("Charizard", 36);
+    // charizard.setFlamePower(120);
+    // cout << "\nCalling showInfo() on FirePokemon:" << endl;
+    // charizard.showInfo();  // prints name, level AND flamePower
+
+    // WaterPokemon squirtle;
+    // squirtle.setPokemon("Squirtle", 8);
+    // squirtle.setWaterPressure(80);
+    // cout << "\nCalling showInfo() on WaterPokemon:" << endl;
+    // squirtle.showInfo();  // prints name, level AND waterPressure
+
+    // ElectricPokemon pikachu;
+    // pikachu.setPokemon("Pikachu", 10);
+    // pikachu.setVoltage(90);
+    // cout << "\nCalling showInfo() on ElectricPokemon:" << endl;
+    // pikachu.showInfo();  // prints name, level AND voltage
+
+    // GrassPokemon bulbasaur;
+    // bulbasaur.setPokemon("Bulbasaur", 8);
+    // bulbasaur.setGrowthRate(70);
+    // cout << "\nCalling showInfo() on GrassPokemon:" << endl;
+    // bulbasaur.showInfo();  // prints name, level AND growthRate
+
+    // FlyingPokemon pidgeotto;
+    // pidgeotto.setPokemon("Pidgeotto", 18);
+    // pidgeotto.setFlightSpeed(85);
+    // cout << "\nCalling showInfo() on FlyingPokemon:" << endl;
+    // pidgeotto.showInfo();  // prints name, level AND flightSpeed
+
+    // cout << "\n\n\nOBSERVATION: Same function showInfo() behaves differently in each class! This is METHOD OVERRIDING. " << endl;
+
+    return 0;
 }

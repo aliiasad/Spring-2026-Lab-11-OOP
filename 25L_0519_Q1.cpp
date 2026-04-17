@@ -200,6 +200,7 @@ void WaterPokemon :: showInfo() {
     return;
 }
 
+// derived #3: electrical
 class ElectricPokemon : public Pokemon {
     private:
         int voltage;
@@ -219,5 +220,27 @@ void ElectricPokemon :: setVoltage(int voltage) {
 void ElectricPokemon :: showInfo() {
     Pokemon :: showInfo();
     cout << "Type: Electric | Voltage: " << voltage << endl;
+    return;
+}
+
+// derived #4: grass
+class GrassPokemon : public Pokemon {
+    int growthRate;
+public:
+    // setter
+    void setGrowthRate(int);
+
+    // helper
+    void showInfo();
+};
+
+void GrassPokemon :: setGrowthRate(int growthRate) { 
+    this->growthRate = growthRate; 
+    return;
+}
+
+void GrassPokemon :: showInfo() {
+    Pokemon :: showInfo();
+    cout << "Type: Grass | Growth Rate: " << growthRate << endl;
     return;
 }

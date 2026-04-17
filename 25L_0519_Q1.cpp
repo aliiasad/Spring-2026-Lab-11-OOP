@@ -129,3 +129,26 @@ void ProfessorTrainer :: showInfo() {
     cout << "Research Area: " << researchArea << endl;
     return;
 }
+
+class Pokemon {
+    protected:
+        string name;
+        int level;
+    public:
+        void setPokemon(string, int);
+
+        void showInfo() {
+            cout << "Pokemon: " << name << " | Level: " << level << endl;
+    }
+};
+
+void Pokemon :: setPokemon(string name, int level) {
+    this->name = name;
+    this->level = level;
+    return;
+}
+
+void Pokemon :: showInfo() {
+    cout << "Pokemon: " << name << " | Level: " << level << endl;
+    return;
+}

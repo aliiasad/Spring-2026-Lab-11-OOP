@@ -83,3 +83,31 @@ void GymLeader :: showInfo() {
     cout << "Badge Reward: " << badgeReward << endl;
     return;
 }
+
+// indp class for multiple inheritance
+class Professor {
+    protected:
+        string field;
+    public:
+        // setter
+        void setField(string);
+
+        // helper
+        void showProfessorInfo();
+};
+
+void Professor :: setField(string field) { 
+    this->field = field;
+    return;
+}
+
+void Professor :: showProfessorInfo() {
+    cout << "Field: " << field << endl;
+    return;
+}
+
+// multiple inheritance ---> (base trainer) & (indp profesor) = ProfessiorTrainer
+class ProfessorTrainer : public Trainer , public Professor {
+    private:
+    public:
+};

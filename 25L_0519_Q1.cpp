@@ -251,3 +251,28 @@ void GrassPokemon :: showInfo() {
     cout << "Type: Grass | Growth Rate: " << growthRate << endl;
     return;
 }
+
+class FlyingPokemon : public Pokemon {
+    private:
+        int flightSpeed;
+    public:
+        // setter
+        void setFlightSpeed(int);
+
+        // helper
+        void showInfo() {
+            Pokemon::showInfo();
+            cout << "Type: Flying | Flight Speed: " << flightSpeed << endl;
+        }
+};
+
+void FlyingPokemon :: setFlightSpeed(int flightSpeed)   {
+    this->flightSpeed = flightSpeed;
+    return;
+}
+
+void FlyingPokemon :: showInfo() {
+    Pokemon::showInfo();
+    cout << "Type: Flying | Flight Speed: " << flightSpeed << endl;
+    return;
+}
